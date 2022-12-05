@@ -2,27 +2,26 @@
 inspired by [FizzBuzz Enterprise Edition](https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition)
 
 ## What is this?
-Das sind die Lösungen für die [Advent of Code](https://adventofcode.com/) Aufgaben, mit sämtlichen Design Patterns angewendet, die wir kennen.
-
+This is a Repository for the 2022 [Advent of Code](https://adventofcode.com/) Tasks, where various design patterns are being utilized to get the best performance possible.  
 ## How to support 
 
-Jede Pull Request ist willkommen, um den Code zu verbessern.
+Pull Requests are very appreciated.
 
-Jedoch muss sie davor von einem Teammitglied, 2 von den 3 Musketieren, meinem Hund, 4 Katzen, Günther von nebenan, einem McDonalds-Mitarbeiter, einer Informatikerin, Jesus, keinem Hochstapler, Robert C. Martin, Biene Maja, Sebastian Kurz und Elon Musk(nur in ausgedruckter Form) genehmigt werden.
+However it needs to be approved by at least a teammember, 2 of the 3 musketeers, my dog, 4 cats, my neighbor Günther, a McDonalds-Worker, a female CS-Student, Jesus, someone who is not a nerd, Robert C. Martin, Maya the Bee, Sebastian Kurz and Elon Musk(print version only).
 
 ## Class Awards:
 
 ### Longest Class Name Award
-Mit 76 Zeichen: 
+With 76 characters: 
 `SimpleAllLinesInResourceFileReaderBufferedReaderWithFileReaderImplementation`
 
 coded on day 1
-### Ärgster Zungenbrecher Award
+### Disgusting Tongue-twister Award
 `IntWrapperToStringWrapperMapper`
 
 coded on day 1
 ### Most Lines of Code Award
- Mit 57 Zeilen
+ With 57 lines:
 ```kotlin
 package org.jackie35er.day1.calorieCalculator.service.implementation
 
