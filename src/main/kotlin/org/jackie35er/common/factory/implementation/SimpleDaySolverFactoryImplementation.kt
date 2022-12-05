@@ -16,25 +16,44 @@ import org.jackie35er.day1.calorieCalculator.service.ParseStringWrapperListToElf
 import org.jackie35er.day1.calorieCalculator.service.implementation.SimpleFindMaxCaloriesCountPerElfInElfListServiceImplementation
 import org.jackie35er.day1.calorieCalculator.service.implementation.SimpleParseStringWrapperListToElfListServiceImplementation
 import org.jackie35er.day1.calorieCalculator.service.implementation.SimpleSolveDayOneServiceImplementation
+import org.jackie35er.day2.rockpaperscissors.service.EvaluateGameService
+import org.jackie35er.day2.rockpaperscissors.service.ParseStringWrapperListToGameService
+import org.jackie35er.day2.rockpaperscissors.service.RoundEvaluatorService
+import org.jackie35er.day2.rockpaperscissors.service.implementation.SimpleEvaluateGameServiceImplementation
+import org.jackie35er.day2.rockpaperscissors.service.implementation.SimpleParseStringWrapperListToGameServiceImplementation
+import org.jackie35er.day2.rockpaperscissors.service.implementation.SimpleRoundEvaluatorServiceImplementation
+import org.jackie35er.day2.rockpaperscissors.service.implementation.SimpleSolveDayTwoServiceImplementation
 
-class SimpleDaySolverFactoryImplementation: DaySolverFactory {
+class SimpleDaySolverFactoryImplementation : DaySolverFactory {
 
     private val findMaxCaloriesCountPerElfInElfListService: FindMaxCaloriesCountPerElfInElfListService
     private val intWrapperToConsolePrinter: IntWrapperToConsolePrinter
     private val parseStringWrapperListToElfListService: ParseStringWrapperListToElfListService
+    private val parseStringWrapperListToGameService: ParseStringWrapperListToGameService
+    private val evaluateGameService: EvaluateGameService
 
     init {
-        this.findMaxCaloriesCountPerElfInElfListService = SimpleFindMaxCaloriesCountPerElfInElfListServiceImplementation()
+        this.findMaxCaloriesCountPerElfInElfListService =
+            SimpleFindMaxCaloriesCountPerElfInElfListServiceImplementation()
         this.intWrapperToConsolePrinter = IntegerWrapperToConsolePrinterImplementation()
         this.parseStringWrapperListToElfListService = SimpleParseStringWrapperListToElfListServiceImplementation()
+        this.parseStringWrapperListToGameService = SimpleParseStringWrapperListToGameServiceImplementation()
+
+        this.evaluateGameService = SimpleEvaluateGameServiceImplementation(SimpleRoundEvaluatorServiceImplementation())
     }
 
     override fun getDaySolver(level: Level): SolveDayService {
-        val allLinesInResourceFileReaderBufferedReaderWithFileReader = SimpleAllLinesInResourceFileReaderBufferedReaderWithFileReaderImplementation(level.path)
+        val allLinesInResourceFileReaderBufferedReaderWithFileReader =
+            SimpleAllLinesInResourceFileReaderBufferedReaderWithFileReaderImplementation(level.path)
         return when (level) {
-            Level.Level1 -> SimpleSolveDayOneServiceImplementation(findMaxCaloriesCountPerElfInElfListService, intWrapperToConsolePrinter,
-                parseStringWrapperListToElfListService
-                , allLinesInResourceFileReaderBufferedReaderWithFileReader)
+            Level.Level1 -> SimpleSolveDayOneServiceImplementation(
+                findMaxCaloriesCountPerElfInElfListService, intWrapperToConsolePrinter,
+                parseStringWrapperListToElfListService, allLinesInResourceFileReaderBufferedReaderWithFileReader
+            )
+            Level.Level2 -> SimpleSolveDayTwoServiceImplementation(
+                allLinesInResourceFileReaderBufferedReaderWithFileReader,
+                intWrapperToConsolePrinter, parseStringWrapperListToGameService, evaluateGameService
+            )
         }
     }
 

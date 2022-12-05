@@ -7,7 +7,8 @@ import org.jackie35er.common.wrapper.factory.implementation.SimpleStringWrapperF
 
 
 enum class Level(pathAsString: String) {
-    Level1("src/main/resources/day1/caloriesForAllElvesInPlainText.sus");
+    Level1("src/main/resources/day1/caloriesForAllElvesInPlainText.sus"),
+    Level2("src/main/resources/day2/rockpaperscissorsPlainText.sus");
 
 
     val path: Path

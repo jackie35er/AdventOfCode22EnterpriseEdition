@@ -4,6 +4,6 @@ import org.jackie35er.common.factory.implementation.SimpleDaySolverFactoryImplem
 
 fun main() {
     val factory = SimpleDaySolverFactoryImplementation()
-    val service = factory.getDaySolver(Level.Level1)
+    val service = factory.getDaySolver(Level.Level2)
     service.solveDay()
 }
