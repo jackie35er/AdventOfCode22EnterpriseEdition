@@ -7,7 +7,7 @@ This is a Repository for the 2022 [Advent of Code](https://adventofcode.com/) Ta
 
 Pull Requests are very appreciated.
 
-However it needs to be approved by at least a teammember, 2 of the 3 musketeers, my dog, 4 cats, my neighbor Günther, a McDonalds-Worker, a female CS-Student, Jesus, someone who is not a nerd, Robert C. Martin, Maya the Bee, Sebastian Kurz and Elon Musk(print version only).
+However it needs to be approved by at least a teammember, 2 of the 3 musketeers, my dog, 4 cats, my neighbor Günther, a McDonalds-Worker, a female CS-Student, Jesus, someone who is not a nerd, Robert C. Martin, the Queen, Maya the Bee, Sebastian Kurz and Elon Musk(print version only).
 
 ## Class Awards:
 
